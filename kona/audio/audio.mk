@@ -96,17 +96,17 @@ PRODUCT_PACKAGES += \
     libtinycompress
 
 PRODUCT_PACKAGES += \
-	capture.sh \
-	capture_headset.sh\
-	playback.sh\
-	playback_headset.sh\
-	setup_backmic2headphone.sh\
-	setup_backmic2headphone.sh\
-	setup_headsetmic2headphone.sh\
-	setup_mainmic2headphone.sh\
-	setup_topmic2headphone.sh\
-	teardown_loopback.sh
-	
+    capture.sh \
+    capture_headset.sh\
+    playback.sh\
+    playback_headset.sh\
+    setup_backmic2headphone.sh\
+    setup_backmic2headphone.sh\
+    setup_headsetmic2headphone.sh\
+    setup_mainmic2headphone.sh\
+    setup_topmic2headphone.sh\
+    teardown_loopback.sh
+
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/sm8250-common/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
@@ -119,7 +119,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
-    
+
 # Low latency audio buffer size in frames
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.period_size=192
@@ -232,8 +232,6 @@ ro.vendor.audio.sos=true
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.audio.soundfx.usb=true
 
-
-
 #parser input buffer size(256kb) in byte stream mode
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.audio.parser.ip.buffer.size=262144
@@ -291,7 +289,6 @@ vendor.audio.volume.headset.gain.depcal=true
 #enable dualmic fluence for voice communication
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.audio.fluence.voicecomm=true
-
 
 USE_XML_AUDIO_POLICY_CONF := 1
 
@@ -390,8 +387,6 @@ vendor.audio.offload.track.enable=false \
 vendor.audio.spkcal.copy.inhal=true \
 vendor.audio.usb.disable.sidetone=true
 
-
-
 # for HIDL related packages
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.audiohalext@1.0 \
@@ -415,13 +410,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
 
-
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DEV_ARBI)),true)
 PRODUCT_PACKAGES_DEBUG += \
     libaudiodevarb
 endif
-
-
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_3D_AUDIO)),true)
 PRODUCT_PACKAGES_DEBUG += \
@@ -429,7 +421,6 @@ PRODUCT_PACKAGES_DEBUG += \
     libvr_amb_engine \
     libhoaeffects_csim
 endif
-
 
 ifeq ($(strip $(BOARD_SUPPORTS_SOUND_TRIGGER)),true)
 PRODUCT_PACKAGES_DEBUG += \

@@ -47,8 +47,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     modetest \
     libtinyxml 
-    
-    
+
 PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0.vendor \
@@ -141,8 +140,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.high_fps_early_phase_offset_ns=-4000000 \
     debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 
-
-
 ifneq ($(PLATFORM_VERSION), 10)
     PRODUCT_PROPERTY_OVERRIDES +=  vendor.display.enable_async_powermode=0
 endif
@@ -165,7 +162,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_touch_timer_ms=200
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 # Indicates whether background blurs are supported.
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.supports_background_blur
-
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 # Recovery is enabled, logging is enabled
