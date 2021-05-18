@@ -449,7 +449,8 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libwfdaac \
-    libwfdaac_vendor
+    libwfdaac_vendor \
+    libdisplayconfig.qti.vendor
 
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-wfd.xml
