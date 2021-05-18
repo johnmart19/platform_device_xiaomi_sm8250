@@ -131,6 +131,3 @@ ro.control_privapp_permissions=log
 #Wfd
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
-
-# Zygote
-persist.device_config.runtime_native.usap_pool_enabled=true
