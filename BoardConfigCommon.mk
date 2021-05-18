@@ -18,10 +18,6 @@ BOARD_VENDOR := xiaomi
 BUILD_BROKEN_DUP_RULES := true
 COMMON_PATH := device/xiaomi/sm8250-common
 
-
-#BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
-#TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -222,7 +218,7 @@ BOARD_VNDK_VERSION := current
 
 #Vendor Boot
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+    $(COMMON_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

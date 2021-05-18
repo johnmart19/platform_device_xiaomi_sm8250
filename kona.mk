@@ -44,38 +44,38 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
-    
+
 PRODUCT_PACKAGES_DEBUG += update_engine_client
 PRODUCT_PACKAGES += \
   update_engine \
   update_engine_client \
   update_engine_sideload \
   update_verifier
-  
+ 
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
-    
+
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service \
     bootctrl.kona \
     bootctrl.kona.recovery 
-    
+
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-    
+
 
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
-    
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
-    
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -93,7 +93,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
-    
+
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -102,15 +102,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore\
     android.hardware.configstore@1.1
-    
+
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
-    
+
 #Display
 $(call inherit-product, $(LOCAL_PATH)/kona/display/display.mk)
-    
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -125,7 +125,7 @@ PRODUCT_PACKAGES += \
 #EqualizerFX
 #PRODUCT_PACKAGES += \
     EqualizerFX
-    
+
 # Exclude sensor from InputManager
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
@@ -133,7 +133,7 @@ PRODUCT_COPY_FILES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-    
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -142,7 +142,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
-    
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -174,23 +174,23 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libipanat \
     liboffloadhal
-    
+
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
-    
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
-    
+
 # Libshim
 #PRODUCT_PACKAGES += \
     libhidlbase_shim
-    
+
 # Libshim
 #PRODUCT_PACKAGES += \
     libandroid_runtime_shim
-    
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.kona \
@@ -199,7 +199,7 @@ PRODUCT_PACKAGES += \
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    
+
 # Media
 $(call inherit-product, $(LOCAL_PATH)/kona/media/media.mk)
 
@@ -224,11 +224,11 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor
-    
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-    
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -244,21 +244,21 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.2
-    
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
-    
+
 # OTA
 PRODUCT_HOST_PACKAGES += \
     signapk
-    
+
 #Perf
 PRODUCT_PACKAGES += \
      vendor.qti.hardware.perf@2.0.vendor\
      vendor.qti.hardware.perf@2.1.vendor\
      vendor.qti.hardware.perf@2.2.vendor
-    
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -307,15 +307,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
    device/xiaomi/sm8250-common/configs/permission/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml  
-    
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
-    
+
 # PowerStats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service.mock
-    
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -329,7 +329,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
-    
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
@@ -382,9 +382,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
-    
+
 PRODUCT_PACKAGES += \
-    libcurl 
+    libcurl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf 
@@ -393,7 +393,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi 
-    
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -404,13 +404,12 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-    
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml
-  
+ 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
@@ -418,15 +417,15 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.2-service-qti
-   
+ 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
     libstdc++.vendor
-    
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
-    
+
 #VNDK
 PRODUCT_PACKAGES += \
     libgui_vendor \
@@ -441,7 +440,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
-    
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
@@ -470,7 +469,7 @@ PRODUCT_PACKAGES += \
     WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
-    
+
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6390/WCNSS_qcom_cfg.ini \
