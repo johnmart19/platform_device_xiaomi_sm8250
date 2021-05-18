@@ -68,9 +68,6 @@ vendor.display.enable_async_powermode
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
-#RIL
-# Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
-
 
 #RmNet Data
 persist.rmnet.data.enable=true
@@ -103,17 +100,15 @@ persist.mm.enable.prefetch=true
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
-#ULMK properties
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=15
+# LMKD
+ro.config.low_ram=false
+ro.lmk.log_stats=true
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 keyguard.no_require_sim=true
 ro.com.android.dataroaming=true
 debug.sf.disable_backpressure=1
-persist.device_config.runtime_native.usap_pool_enabled=true
-ro.control_privapp_permissions=log
 
 #Wfd
 persist.debug.wfd.enable=1
