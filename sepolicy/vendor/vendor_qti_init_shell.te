@@ -6,3 +6,5 @@ allow vendor_qti_init_shell sysfs_wakeup:file setattr;
 set_prop(vendor_qti_init_shell, vendor_displayfeature_prop)
 set_prop(vendor_qti_init_shell, ctl_start_prop)
 
+allow vendor_qti_init_shell exported_system_radio_prop:file { getattr map open read };
+allow vendor_qti_init_shell exported_system_radio_prop:property_service set;

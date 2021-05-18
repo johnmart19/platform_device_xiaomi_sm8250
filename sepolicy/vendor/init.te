@@ -1,3 +1,5 @@
+permissive init;
+
 # For mount tracefs tracefs /sys/kernel/tracing
 allow init debugfs_tracing_debug:dir mounton;
 
@@ -26,3 +28,5 @@ allow init vendor_persist_sensors_file : file {append};
 allow init vendor_sysfs_dynamic_fps : file {read open};
 allow init graphics_device : chr_file { getattr read write open ioctl};
 allow init vendor_sysfs_iio : file { read open };
+allow init default_android_hwservice:hwservice_manager { add find };
+allow init hidl_base_hwservice:hwservice_manager add;
