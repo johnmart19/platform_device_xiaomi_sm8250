@@ -6,3 +6,6 @@ debug.stagefright.omx_default_rank.sw-audio=16
 #Camera Support
 vendor.camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCamera
 ro.control_privapp_permissions=log
+
+# Hint for powerhal
+ro.sf.blurs_are_expensive=1
