@@ -58,7 +58,7 @@ VENDOR_CMDLINE := "console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboo
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
 
 #DTB/DTBO
-#BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_NEEDS_DTBOIMAGE := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --vendor_cmdline $(VENDOR_CMDLINE)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
