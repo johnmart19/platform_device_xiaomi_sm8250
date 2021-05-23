@@ -20,6 +20,10 @@
     <string name="device_specific_settings_summary">Специальные настройки</string>
     <string name="device_min_refresh_rate">Частота обновления экрана</string>
     <string name="msg_device_need_restart">Пожалуйста, перезагрузите устройство, для применения настройки.</string>
+	
+    <!--  DT2W    -->
+    <string name="dt2w_enable_title">Двойное касание</string>
+    <string name="dt2w_enable_summary">Включать экран при двойном касании</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Температурные профили</string>
