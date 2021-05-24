@@ -258,7 +258,7 @@
       },
       {
          "Name":"L3BigClusterMinFreq",
-         "Path":"/sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq",
+         "Path": "/sys/class/devfreq/soc:qcom,l3-cpu4/min_freq",
          "Values":[
             "1440000000",
             "300000000"
@@ -343,21 +343,9 @@
       },
       {
          "PowerHint":"INTERACTION",
-         "Node":"CPUBigClusterMinFreq",
-         "Duration":0,
-         "Value":"1286400"
-      },
-      {
-         "PowerHint":"INTERACTION",
          "Node":"CPUBigPlusClusterMinFreq",
          "Duration":0,
          "Value":"1286400"
-      },
-      {
-         "PowerHint":"INTERACTION",
-         "Node":"CPULittleClusterMinFreq",
-         "Duration":0,
-         "Value":"1113600"
       },
       {
          "PowerHint":"INTERACTION",
