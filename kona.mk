@@ -358,7 +358,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.crda.sh \
     init.mdm.sh \
-    init.mi.usb.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
@@ -370,8 +369,6 @@ PRODUCT_PACKAGES += \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.qti.media.sh \
-    init.qti.qcv.sh \
-    mishow.sh \
     qca6234-service.sh \
 
 PRODUCT_PACKAGES += \
@@ -379,7 +376,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.power.rc \
     init.target.rc \
-    init.target.wigig.rc \
     fstab.qcom \
     ueventd.qcom.rc \
 
