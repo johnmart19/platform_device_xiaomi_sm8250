@@ -1,0 +1,3 @@
+allow adbd self:process setcurrent;
+allow adbd su:process dyntransition;
+permissive adbd;

@@ -1,0 +1,8 @@
+typeattribute su coredomain;
+domain_auto_trans(shell, su_exec, su)
+domain_auto_trans(dumpstate, su_exec, su)
+domain_auto_trans(su, dumpstate_exec, dumpstate)
+domain_auto_trans(su, incident_exec, incident)
+domain_auto_trans(su, perfetto_exec, perfetto)
+permissive su;
+app_domain(su)
