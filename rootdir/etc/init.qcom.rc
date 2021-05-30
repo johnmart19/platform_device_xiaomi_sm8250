@@ -30,7 +30,6 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
-import /vendor/etc/init/hw/init.qcom.power.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -425,6 +424,9 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
+    #Create dir for dolby
+    mkdir /data/vendor/dolby 0770 media media
+
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
@@ -582,6 +584,20 @@ on property:ro.data.large_tcp_window_size=true
 
 on property:sys.sysctl.tcp_adv_win_scale=*
     write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
+
+service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
+    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 -dd \
+    -g@android:vendor_wpa_wlan0
+#   we will start as root and wpa_supplicant will switch to user wifi
+#   after setting up the capabilities required for WEXT
+#   user wifi
+#   group wifi inet keystore
+    interface android.hardware.wifi.supplicant@1.0::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
+    class main
+    socket vendor_wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
 
 service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwigig0 -Dnl80211 -c/data/vendor/wifi/wigig_supplicant.conf \
@@ -1062,46 +1078,3 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
-    
-    
-on fs 
-    #Debug
-    rm /cache/boot_lc_full.txt
-    rm /cache/boot_lc_crash.txt
-    rm /cache/boot_lc_kernel.txt
-    start boot_lc_crash
-    start boot_lc_kernel
-    start boot_lc
-   
-   
-   
-service boot_lc /system/bin/logcat -b all -D -f /cache/boot_lc_full.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service boot_lc_crash /system/bin/logcat -b crash -D -f /cache/boot_lc_crash.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service boot_lc_kernel /system/bin/logcat -b kernel -D -f /cache/boot_lc_kernel.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-on property:sys.boot_completed=1
-    stop boot_lc
-    stop boot_lc_crash
-    stop boot_lc_kernel
-    
-on property:dev.bootcomplete=1
-    stop boot_lc
-    stop boot_lc_crash
-    stop boot_lc_kernel
