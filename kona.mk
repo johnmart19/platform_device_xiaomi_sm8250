@@ -14,8 +14,7 @@
 # limitations under the License.
 #
  # Ihnerit virtual_ab_ota product
-$(call inherit-product, \
-    $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
     
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -122,10 +121,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
-#EqualizerFX
-#PRODUCT_PACKAGES += \
-    EqualizerFX
-
 # Exclude sensor from InputManager
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
@@ -182,14 +177,6 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
-
-# Libshim
-#PRODUCT_PACKAGES += \
-    libhidlbase_shim
-
-# Libshim
-#PRODUCT_PACKAGES += \
-    libandroid_runtime_shim
 
 # Lights
 PRODUCT_PACKAGES += \

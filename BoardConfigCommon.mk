@@ -115,7 +115,6 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_kona
-#TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_kona
 
 # Metadata
