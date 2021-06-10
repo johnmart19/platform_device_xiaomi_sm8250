@@ -10,6 +10,9 @@ ro.control_privapp_permissions=log
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
+# Disable FOD
+ro.fingerprint.inscreen_disabled=true
+
 # Hint for powerhal
 ro.sf.blurs_are_expensive=1
 
