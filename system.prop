@@ -19,7 +19,6 @@ debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
 ro.vendor.display.sensortype=2
-#ro.vendor.dfps.enable=true
 ro.media.recorder-max-base-layer-fps = 60
 
 # CNE
@@ -34,9 +33,6 @@ dev.pm.dyn_samplingrate=1
 
 # DPM
 persist.vendor.dpm.feature=1
-
-#Flex
-#persist.radio.flexmap_type=none
 
 #GNSS
 ro.config.gnss.support=GPS,NavIC,BeiDou,GLONASS,Galileo
