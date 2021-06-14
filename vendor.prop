@@ -117,7 +117,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 #Media
 debug.media.video.frc=false
 debug.media.video.vpp=false
-debug.media.video.style=fals
+debug.media.video.style=false
 debug.media.vpp.enable=false
 debug.sf.latch_unsignaled=1
 debug.stagefright.ccodec=1
@@ -203,7 +203,7 @@ persist.vendor.radio.dynamic_sar=1
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.sync_request=true
 sys.vendor.shutdown.waittime=500
-persist.vendor.calisar.times=25
+persist.vendor.calisar.times=255
 
 #SoundTrigger
 ro.vendor.audio.soundtrigger.appdefine.cnn.level=35
