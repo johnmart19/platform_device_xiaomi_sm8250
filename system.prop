@@ -17,8 +17,6 @@ persist.vendor.cp.qc3p5_vfloat_offset_uv=110000
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
-debug.sf.latch_unsignaled=1
-ro.vendor.display.sensortype=2
 ro.media.recorder-max-base-layer-fps = 60
 
 # CNE

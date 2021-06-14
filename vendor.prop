@@ -54,11 +54,6 @@ dalvik.vm.heaptargetutilization=0.75
 ro.vendor.cabc.enable=false
 ro.vendor.bcbc.enable=true
 ro.vendor.dfps.enable=false
-ro.vendor.smart_dfps.enable=true
-#prop of disable cloud control in video app
-ro.vendor.video.decode.only=false
-persist.vendor.dfps.level=60
-persist.vendor.power.dfps.level=0
 
 #DC
 #system prop for dc backlight
