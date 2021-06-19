@@ -16,6 +16,10 @@ ro.fingerprint.inscreen_disabled=true
 # Hint for powerhal
 ro.sf.blurs_are_expensive=1
 
+# IORap
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
+
 # ZRam
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
