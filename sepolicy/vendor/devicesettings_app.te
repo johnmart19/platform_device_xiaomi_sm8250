@@ -1,0 +1,2 @@
+allow devicesettings_app hal_displayfeature_hwservice:hwservice_manager find;
+allow devicesettings_app overlay_service:service_manager find;
