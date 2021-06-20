@@ -15,6 +15,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- DC Dimming settings -->
+    <string name="dc_dimming_enable_title">Устранение мерцания</string>
+    <string name="dc_dimming_enable_summary">Режим устранения мерцания снижает нагрузку на глаза в условиях низкой освещенности</string>
+
+    <!-- DC Dimming tile -->
+    <string name="dc_dimming_tile_title">Устранение мерцания</string>
+
     <!-- Device specific -->
     <string name="device_specific_settings_title">Настройки Устройства</string>
     <string name="device_specific_settings_summary">Специальные настройки</string>
@@ -35,5 +42,16 @@
     <string name="thermal_dialer">Телефон</string>
     <string name="thermal_gaming">Игры</string>
     <string name="thermal_youtube">Youtube</string>
+	
+    <!-- Touch Control Settings -->
+    <string name="touch_control_title">Контроль касаний</string>
+    <string name="touch_game_mode_title">Активировать режим игры</string>
+    <string name="touch_game_mode_summary">Увеличить частоту сенсора до 360Hz</string>
+    <string name="touch_response_title">Отзывчивость касаний</string>
+    <string name="touch_response_summary">Управление отзывчивостью сенсора</string>
+    <string name="touch_sensitivity_title">Чувствительность касаний</string>
+    <string name="touch_sensitivity_summary">Управление чувствительностью касаний</string>
+    <string name="touch_resistant_title">Сенсорная зона</string>
+    <string name="touch_resistant_summary">Уменьшить чувствительность по краям, чтобы избежать ложных касаний</string>
 
 </resources>
