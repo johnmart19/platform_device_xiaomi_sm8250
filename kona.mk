@@ -24,10 +24,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
- 
-#Gapps
-#$(call inherit-product, vendor/gapps/pixel-gapps.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
     
@@ -185,6 +181,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.kona \
     android.hardware.lights-service.qti
+	
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
