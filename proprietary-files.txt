@@ -313,7 +313,6 @@ system_ext/lib64/libeffects.so|732af106b4443086d90bf39a6ac545f190093801
 vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|7207a97fd3f00c854be4e4ddee98c881c61c2266
 vendor/etc/dolby/dax-default.xml|7161461c833cfe6afd512bf1d5277d933394ddde
 vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc|421e752eb65f57d131a3313a42abf830
-vendor/etc/media_codecs_dolby_audio.xml|7c9ae775a9d3d974494531c85e4d5f38ff603e25
 vendor/lib/libdapparamstorage.so|6fce779d3b4f21783d3d96e82f9b185107bbab38
 vendor/lib/libstagefright_soft_ddpdec.so|130b9da07e3c4a4ec04142049246eba18f1c350f
 vendor/lib/libstagefrightdolby.so|bdb088401b31fe3df302966a7c5a3da903267769
