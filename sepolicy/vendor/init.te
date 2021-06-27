@@ -30,3 +30,6 @@ allow init graphics_device : chr_file { getattr read write open ioctl};
 allow init vendor_sysfs_iio : file { read open };
 allow init default_android_hwservice:hwservice_manager { add find };
 allow init hidl_base_hwservice:hwservice_manager add;
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;
