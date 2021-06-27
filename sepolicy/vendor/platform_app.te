@@ -1,2 +1,4 @@
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 allow platform_app hal_dms_default:binder { call transfer };
+allow platform_app bluetooth_prop:file { map };
+allow platform_app device:chr_file { read write open getattr ioctl };
